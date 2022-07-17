@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.image_oragnizer.HomeController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="68.0" prefWidth="657.0" style="-fx-background-color: purple;" text="Ultimate Image Organizer" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Pane layoutX="450.0" layoutY="46.0" prefHeight="410.0" prefWidth="207.0" style="-fx-border-color: purple;">
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="29.0" layoutX="14.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imgs/settings.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="58.0" layoutY="22.0" prefHeight="38.0" prefWidth="136.0" text="Preferences">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="Or_By" layoutX="25.0" layoutY="122.0" prefHeight="38.0" prefWidth="150.0" />
+            <Line endX="100.0" layoutX="88.0" layoutY="71.0" startX="-73.0" />
+            <Label alignment="CENTER" layoutX="24.0" layoutY="87.0" prefHeight="29.0" prefWidth="150.0" text="Organize  By" textFill="PURPLE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="90.0" layoutY="178.0" startX="-73.0" />
+            <Label alignment="CENTER" layoutX="29.0" layoutY="187.0" prefHeight="29.0" prefWidth="150.0" text="Keep Original Images" textFill="PURPLE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="34.0" fitWidth="29.0" layoutX="15.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imgs/programmer.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="58.0" layoutY="291.0" prefHeight="38.0" prefWidth="136.0" text="About Me">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="85.0" layoutY="336.0" startX="-73.0" />
+            <ImageView fitHeight="34.0" fitWidth="29.0" layoutX="15.0" layoutY="358.0" onMouseClicked="#github" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imgs/github.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="29.0" layoutX="84.0" layoutY="358.0" onMouseClicked="#Linkdin" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imgs/linkedin.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="29.0" layoutX="158.0" layoutY="358.0" onMouseClicked="#cv" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imgs/resume.png" />
+               </image>
+            </ImageView>
+            <CheckBox fx:id="Cut" alignment="CENTER" layoutX="56.0" layoutY="255.0" mnemonicParsing="false" onAction="#CheckBox3" prefHeight="23.0" prefWidth="97.0" text="No">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="Copy" alignment="CENTER" layoutX="56.0" layoutY="222.0" mnemonicParsing="false" onAction="#CheckBox4" prefHeight="23.0" prefWidth="97.0" text="Yes">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </CheckBox>
+         </children>
+      </Pane>
+      <TextField fx:id="Img_Path" editable="false" layoutX="59.0" layoutY="162.0" prefHeight="45.0" prefWidth="318.0" />
+      <TextField fx:id="Des_Image" editable="false" layoutX="59.0" layoutY="268.0" prefHeight="45.0" prefWidth="318.0" />
+      <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="12.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imgs/folder.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="37.0" layoutX="12.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imgs/files-and-folders.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="386.0" layoutY="162.0" mnemonicParsing="false" onAction="#SelectImgs" prefHeight="45.0" prefWidth="52.0" styleClass="B_Select" stylesheets="@Css/Style.css">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imgs/selection.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="386.0" layoutY="268.0" mnemonicParsing="false" onAction="#SelectDes" prefHeight="45.0" prefWidth="52.0" styleClass="B_Select" stylesheets="@Css/Style.css">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imgs/selection.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="136.0" layoutY="367.0" mnemonicParsing="false" onAction="#FindImgs" prefHeight="57.0" prefWidth="150.0" styleClass="B_Or" stylesheets="@Css/Style.css" text="Organize Images">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="Lbl_1" layoutX="75.0" layoutY="176.0" text="Please Select Images Folder " textFill="PURPLE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="Lbl_2" layoutX="75.0" layoutY="283.0" text="Please Select Destination Folder " textFill="PURPLE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="108.0" text="Number of Images :" textFill="PURPLE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="Img_Count" alignment="CENTER" layoutX="177.0" layoutY="86.0" prefHeight="58.0" prefWidth="113.0">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Button layoutX="598.0" layoutY="15.0" mnemonicParsing="false" onAction="#Close" prefHeight="38.0" prefWidth="37.0" styleClass="B_Select" stylesheets="@Css/Style.css">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imgs/close-button.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Pane fx:id="F_Pane" layoutX="59.0" layoutY="104.0" prefHeight="292.0" prefWidth="463.0" style="-fx-background-color: green;">
+         <children>
+            <Label layoutX="110.0" layoutY="14.0" prefHeight="51.0" prefWidth="244.0" text="Ultimate Image Organizer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="85.0" prefHeight="38.0" prefWidth="398.0" text="Welcome To This Simple App , This Application is used for Organize Images" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="120.0" prefHeight="38.0" prefWidth="390.0" text="You can Organize Images By Type or Date , we will add more Option SAP" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="158.0" prefHeight="38.0" prefWidth="430.0" text="If You Face Any Issue in The Application Reach me At : HussinTsouli@Gmail.com" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <Button layoutX="172.0" layoutY="219.0" mnemonicParsing="false" onAction="#Hide_Pane" prefHeight="38.0" prefWidth="113.0" styleClass="B_Or" stylesheets="@Css/Style.css" text="Start " />
+         </children>
+      </Pane>
+      <ImageView fitHeight="38.0" fitWidth="37.0" layoutX="173.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imgs/Logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

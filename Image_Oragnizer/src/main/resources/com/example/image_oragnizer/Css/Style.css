@@ -1,0 +1,35 @@
+
+.B_Select{
+-fx-background-color:transparent;
+}
+.B_Select:hover{
+-fx-background-color: Green;
+-fx-opacity:50%;
+
+
+}
+
+.B_Select:pressed{
+-fx-background-color:transparent;
+}
+
+
+.B_Or{
+-fx-background-color: purple;
+-fx-text-fill:white;
+-fx-background-radius:80px;
+}
+
+.B_Or:hover{
+-fx-background-color: white;
+-fx-text-fill:purple;
+-fx-background-radius:80px;
+-fx-border-color:purple;
+-fx-border-radius:80px;
+}
+
+.B_Or:pressed{
+-fx-background-color: purple;
+-fx-text-fill:white;
+-fx-background-radius:80px;
+}
